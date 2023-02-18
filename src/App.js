@@ -1,11 +1,14 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import GoalsList from './components/GoalsList';
+import TodoList from './components/TodosList';
 
-export default function App() {
+function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <>
+      <TodoList />
+      <GoalsList />
+    </>
   );
 }
+
+export default App;
