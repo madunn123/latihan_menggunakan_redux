@@ -1,6 +1,6 @@
 import React from 'react';
-import GoalsList from './components/GoalsList';
-import TodoList from './components/TodosList';
+import GoalsList from './components/GoalList';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
