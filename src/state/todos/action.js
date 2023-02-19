@@ -1,3 +1,5 @@
+import mockAPI from '../../data/mockApi';
+
 function addTodoActionCreator({ id, text }) {
   return {
     type: 'ADD_TODO',
@@ -69,8 +71,8 @@ export {
   deleteTodoActionCreator,
   toggleTodoActionCreator,
   receiveTodosActionCreator,
-  asyncAddTodo,
   asyncReceiveTodos,
+  asyncAddTodo,
   asyncDeleteTodo,
   asyncToggleTodo,
 };

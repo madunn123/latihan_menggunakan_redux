@@ -16,7 +16,6 @@ function todoDeletionCheck(store) {
   };
 }
 
-// thunk function
 function thunk(store) {
   return (next) => (action) => {
     if (typeof action === 'function') {

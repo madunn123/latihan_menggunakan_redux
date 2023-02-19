@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  addTodoActionCreator,
-  deleteTodoActionCreator,
-  toggleTodoActionCreator,
+  asyncAddTodo,
+  asyncDeleteTodo,
   asyncReceiveTodos,
+  asyncToggleTodo,
 } from '../state/todos/action';
 import TodoInput from './TodoInput';
 import TodoItem from './TodoItem';
@@ -18,21 +18,15 @@ function TodoList() {
   }, [dispatch]);
 
   function onAddTodo(text) {
-    const id = `todo-${+new Date()}`;
-    dispatch(
-      addTodoActionCreator({
-        id,
-        text,
-      })
-    );
+    dispatch(asyncAddTodo(text));
   }
 
   function onToggleTodo(id) {
-    dispatch(toggleTodoActionCreator(id));
+    dispatch(asyncToggleTodo(id));
   }
 
   function onDeleteTodo(id) {
-    dispatch(deleteTodoActionCreator(id));
+    dispatch(asyncDeleteTodo(id));
   }
 
   return (
