@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addTodoActionCreator,
   deleteTodoActionCreator,
   toggleTodoActionCreator,
+  asyncReceiveTodos,
 } from '../state/todos/action';
 import TodoInput from './TodoInput';
 import TodoItem from './TodoItem';
@@ -11,6 +12,10 @@ import TodoItem from './TodoItem';
 function TodoList() {
   const todos = useSelector((states) => states.todos);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(asyncReceiveTodos());
+  }, [dispatch]);
 
   function onAddTodo(text) {
     const id = `todo-${+new Date()}`;
