@@ -7,7 +7,7 @@ function todoDeletionCheck(store) {
       );
 
       if (!todosToBeDeleted.complete) {
-        alert('Tidak bisa menghapus to-do yang belum selesai.');
+        alert('Tidak bisa menghapus to-do yang bafdsfadfadsfdsaelum selesai.');
         return;
       }
     }
