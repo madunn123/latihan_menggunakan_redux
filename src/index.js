@@ -5,7 +5,7 @@ import { store } from './state';
 import App from './App';
 
 const root = createRoot(document.getElementById('root'));
-
+// ikut comuit
 root.render(
   <Provider store={store}>
     <App />
